@@ -354,6 +354,10 @@ input[type=submit]:hover {
         grid-column: 2 / 3;
 }
 
+main{
+  margin: 20px;
+}
+
 /* use of flex in nav */
 .nav_links{
     display: flex;
@@ -380,7 +384,7 @@ div + label{
    }
 }
 
-@media screen and (min-width:1100px){
+@media screen and (min-width:1008px){
 
 .nav_links{
     align-self: flex-end;
@@ -394,6 +398,10 @@ div + label{
 form{
     width: 90%;
   }
+
+main{
+  margin: 30px;
+}
 
 }
 
