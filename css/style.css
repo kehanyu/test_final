@@ -1,0 +1,400 @@
+body{
+    background-image: url('../images/background.jpg');
+    background-color: #f1f1f1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: normal;
+
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a.skip{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -80px;
+    z-index: 5;
+}
+
+a.skip:focus{
+    top:20px;
+    color: black;
+    text-decoration-style: solid;
+  }
+
+
+*:focus{
+    border: 2px solid black;
+}
+
+li a{
+    padding: 15px;
+    color:rgb(63, 47, 23);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(223, 221, 249);
+}
+
+nav{
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 4;
+}
+
+nav li a:hover{
+    border: 3px solid rgb(59, 59, 59);
+    background-color: beige;
+}
+
+.place, .coffee, .food{
+    border: 3px solid rgb(59, 59, 59);
+}
+
+img{
+    border: 3px solid rgb(134, 99, 48);
+    border-radius: 10px;
+    width: 250px;
+    margin: 20px;
+    padding: 5px;
+}
+
+img:hover{
+    /* filter:grayscale(70%); */
+    transform: scale(1.1);
+}
+
+h1{
+    margin: 40px;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 240px;
+}
+
+p{
+    margin: 20px;
+    text-align: left;
+    font-size: 18px;
+}
+
+footer p{
+    font-size: 14px;
+    display: block;
+    text-align: center;
+}
+
+/* use of flex */
+.transportation, .cafe, .food_img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* use of grid */
+.place_img{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.place_img img{
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+
+
+.nanjing, .nightBund{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* animation */
+
+#bund{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    animation-name: bundAnimation;
+    animation-duration: 2s;
+}
+
+@keyframes bundAnimation {
+    /* 0% {width: 10%; opacity: 0;}
+    25%{width: 20%; opacity: 0.4;}
+    50% {width: 30%; opacity: 0.6;}
+    100% {width: 50%; opacity: 1;} */
+    0% {transform: rotate(10deg); }
+    100% {transform: rotate(-10deg); }
+}
+
+/* the contact form */
+
+
+legend{
+    font-size: 125%;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+  
+  label{
+    display: inline-block;
+    margin-right:10px;
+    width:50%;
+  }
+  input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  span{
+    margin-left:20%;
+    font-family: italic;
+    font-weight: bold;
+  }
+  
+  textarea{
+    width: 100%;
+    height: 35vh;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  
+input[type=checkbox]{
+      display:inline;
+      width:inherit;
+  }
+  
+input[type=submit] {
+    background-color: black;
+    color: white;
+    padding: 25px 25px;
+    margin: 10px 0;
+    /* border: none; */
+    border-radius: 2px;
+    cursor: pointer;
+    width: 50%;
+    justify-content: center;
+  }
+  
+input[type=submit]:hover {
+    opacity: 0.7;
+  }
+
+
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  /* .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  } */
+
+  .flip-card:hover .flip-card-inner,
+  .flip-card:focus-within .flip-card-inner,
+  .flip-card:active .flip-card-inner,
+  .flip-card:focus .flip-card-inner{
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-back {
+    background-color:  rgb(223, 221, 249);
+    color: black;
+    transform: rotateY(180deg);
+  }
+
+  .profile{
+    width:300px;
+    height:300px;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  h2{
+      margin: 10px;
+  }
+
+  .container{
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+ 
+  }
+
+  .aboutMe{
+      margin-top: 50px;
+  }
+
+
+
+.parallax{
+    background: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    opacity: 0.8;
+    font-size: 35px;
+}  
+
+.videoWrapper {
+    margin-top: 80px;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (prefers-reduced-motion) {
+#bund{
+    animation: none;
+}
+
+.flip-card-inner{
+  transition: none;
+}
+
+/* .flip-card:hover .flip-card-inner {
+  transform: none;
+} */
+
+
+/*Turn off parallax*/
+.parallax{
+    background-attachment: initial;
+    }
+
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+
+
+/* use of grid */
+
+.intro{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+.overview{
+        grid-column: 1 / 2;
+    }
+
+#bund{
+        grid-column: 2 / 3;
+}
+
+/* use of flex in nav */
+.nav_links{
+    display: flex;
+    flex-direction: row;
+}
+
+form{
+      width: 80%;
+      margin: 0 auto;
+    }
+  
+input{
+      width:80%;
+    }
+  
+textarea{
+      width:80%;
+      height: 25vh;
+   }
+   
+div + label{
+      line-height: 25vh;
+      vertical-align:top;
+   }
+}
+
+@media screen and (min-width:1100px){
+
+.nav_links{
+    align-self: flex-end;
+}
+
+.place_img{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+form{
+    width: 90%;
+  }
+
+}
+
+
