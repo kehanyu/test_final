@@ -333,9 +333,6 @@ input[type=submit]:hover {
 
 
 
-
-
-
 @media screen and (min-width: 768px) {
 
 
@@ -401,6 +398,21 @@ form{
 
 main{
   margin: 30px;
+}
+
+
+@media (prefers-reduced-motion) {
+
+.flip-card-inner{
+  transition: none;
+}
+
+.flip-card .flip-card-inner {
+  transform: rotateY(180deg);
+
+
+}
+
 }
 
 }
